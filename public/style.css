@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic);
+html,body{
+    font-family: "Arimo",sans-serif;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+}
+body{
+    background: url("/img/light-veneer.png");
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+header{
+    width:100%;
+    background:#eeee;
+    background-size:cover;
+}
+.nav_layout_header{
+    display:flex;
+    justify-content: space-around;
+    padding:10px;
+    background:black;
+    color: #ffffff;
+    margin:0 auto;
+    flex-wrap:wrap;
+}
+
+.header_section{
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.header_item{
+    padding:10px 15px;
+    font-size:18px;
+}
+.header_item a{
+    display: block;
+    text-decoration: none;
+    font-weight: 800;
+    margin: 0 10px;
+    position: relative;
+}
+.header_item a,
+.header_item a:before,
+.header_item a:after{
+    transition: all .5s;
+}
+.header_item a:hover{
+    color: #555;
+    cursor: pointer;
+}
+.header_item a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+.header_item a:hover:after{
+    width: 100%;
+}
+.main_section{
+    padding-top: 50px;
+}
+.section_layout{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.section_line {
+    overflow: hidden;
+    text-align: center;
+}
+.section_line_text:before{
+    content:"";
+    display:inline-block;
+    width:20vw;
+    height: 2px;
+    background-color:#000000;
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+.section_line_text:after{
+    content:"";
+    display:inline-block;
+    width:20vw;
+    height: 2px;
+    background-color:#000000;
+    vertical-align:middle;
+    margin-left:10px;
+}
+.nav_layout_footer{
+    display:flex;
+    justify-content: space-around;
+    padding:10px;
+    flex-wrap: wrap;
+    background:#212121;
+    color: #ffffff;
+}
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    font-size: 10px;
+}
+.link{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_section{
+    flex-basis:285px;
+}
+.footer_section h2{
+    text-align: center;
+}
+.link_img{
+    padding:5px;
+    margin:5px;
+    background:black;
+    border-radius: 10px;
+    background: black radial-gradient(circle at 50% 0, #0a0a0a, #151719);
+    box-shadow:
+            inset rgba(0,0,0,.6) 0 -3px 8px,
+            inset dimgrey 0 3px 8px,
+            rgba(0,0,0,.8) 0 3px 8px -3px;
+}
+.link_img img{
+    width:22px;
+    height:22px;
+}
