@@ -1,0 +1,16 @@
+table {
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    align:center;
+    border-collapse: collapse;
+    margin:0 auto;
+}
+th,td{
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+th,td:not(:last-of-type){
+    border:2px solid;
+
+}

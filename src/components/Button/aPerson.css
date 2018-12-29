@@ -1,0 +1,23 @@
+a.button {
+    padding:5px;
+    margin:5px;
+    background:black;
+    color: white;
+    border-radius: 10px;
+    background: black ;
+    text-align: center
+
+}
+
+a.button:hover {
+    box-shadow:
+            inset rgba(0,0,0,.6) 0 -3px 8px,
+            inset rgba(183, 174, 184, 0.93) 0 3px 8px,
+            rgba(0, 0, 0, 0.27) 0 3px 8px -3px;
+    cursor: pointer;
+}
+a.button:active {
+    background: rgba(255,255,255,.7);
+    color:black;
+    box-shadow: inset 0 0 2px rgba(0,0,0,.2), inset 0 2px 5px rgba(0,0,0,.2), 0 1px rgba(255,255,255,.2);
+}

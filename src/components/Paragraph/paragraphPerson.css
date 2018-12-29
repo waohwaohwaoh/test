@@ -1,0 +1,10 @@
+.monolog{
+    padding:20px;
+    background: beige;
+    box-shadow: 0 0 3px 1px #151719;
+    word-wrap: break-word;
+    text-size:10px;
+    text-transform: none;
+    font-style: italic;
+
+}
