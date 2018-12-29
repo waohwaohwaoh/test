@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import '../../App.css';
-import FooterPage from '../../components/footer/footer';
-import HeaderPage from '../../components/header/header';
+import FooterPage from '../../components/Footer/footer';
+import HeaderPage from '../../components/Header/header';
 import TablePerson from '../../components/TablePerson/TablePerson';
-import Headline from '../../components/LabelText/Headline/Headline2'
+import Headline from '../../components/LabelText/Headline/Headline2';
+import Button from '../../components/Button/aPerson';
+import {personHeaders} from "../../constans/tableHeaders";
 
 export default class allMastersPage extends Component{
 
@@ -25,7 +27,11 @@ export default class allMastersPage extends Component{
                 lastName: 'Frolov',
                 patronymic: 'Sergeevich',
                 telephone: 79992533}
-        ]
+        ];
+
+
+
+
         const pageTitle='Список мастеров';
         return(
             <div>
@@ -39,7 +45,10 @@ export default class allMastersPage extends Component{
                     <div className="section_layout">
                         <TablePerson
                             rows={person}
-                        />
+                            headers={personHeaders}
+                        >
+                            {<Button class={'button'} value={'Информация'} />}
+                        </TablePerson>
                     </div>
                 </section>
 

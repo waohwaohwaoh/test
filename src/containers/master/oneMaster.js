@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../App.css';
-import FooterPage from '../../components/footer/footer';
-import HeaderPage from '../../components/header/header';
+import FooterPage from '../../components/Footer/footer';
+import HeaderPage from '../../components/Header/header';
 import ImagePerson from '../../components/Image/Image';
 import Headline from '../../components/LabelText/Headline/Headline2';
 import ParagraphPerson from '../../components/Paragraph/paragraphPerson';

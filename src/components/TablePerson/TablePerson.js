@@ -1,54 +1,58 @@
 import React, { Component } from 'react';
 import '../../App.css';
 import PersonA from '../Button/aPerson';
+import './Table.css';
 
 class PersonRows extends Component{
-
     render () {
-            const {name,lastName,patronymic,telephone}=this.props.value;
-        return(
+        const values=this.props.value;
+        const children=this.props.children;
+        const row=[];
+        for(let key in values)
+        {
+            row.push(<td>{values[key]}</td>)
+        }
+                return(
              <tr>
-                 <td>{name}</td>
-                 <td>{lastName}</td>
-                 <td>{patronymic}</td>
-                 <td>{telephone}</td>
-                 <td>
-                     <PersonA
-                        value="Информация"
-                        class="button"
-                        href=""
-                    />
-                 </td>
+                 {row}
+                 <td>{children}</td>
              </tr>
         )}
 }
 
  export default class PersonTable extends Component{
     render(){
-    const rows= this.props.rows.map((row,index)=>{
+        const headers=this.props.headers;
+        const rows=this.props.rows.map((row,index)=>{
+            return(
+                <PersonRows
+                    value={row}
+                >
+                    {React.cloneElement(this.props.children, { key: index })}
+                </PersonRows>
+                    )
+        });
         return(
-            <PersonRows
-                key={index}
-                value={row}
-            />
-        )})
-        return(
-            <table>
-                <thead>
-                    <th>Фамилия</th>
-                    <th>Имя</th>
-                    <th>Отчество</th>
-                    <th>Телефон</th>
-                </thead>
-                <tbody>
-                {rows}
-                </tbody>
-            </table>
+                    <table>
+                        <thead>
+                            {headers.map((head)=>
+                                {
+                                    return(
+                                        <th>{head.headerContent}</th>
+                                    )
+                                }
+                            )}
+                        </thead>
+                        <tbody>
+                        {rows}
+                        </tbody>
+                    </table>
+                    )
+    }
 
-                )
 
     }
-}
+
 
 
 

@@ -30,7 +30,7 @@ import vk from '../../img/vk.svg';
                             information.map((info)=>{
                             return(
                                 <Paragraph
-                                    value={info}
+                                    value={info.toString()}
                                 />
 
 

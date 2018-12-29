@@ -1,6 +1,14 @@
-import React, { Component } from 'react';
-import '../../App.css';
+import React, { Component, PropTypes } from 'react';
+import './paragraphPerson.css';
 
-export default props=>(
-    <p className={props.class}>{props.value}</p>
-)
+export default class paragraphPerson extends Component{
+
+    render(){
+        return(
+            <p className={this.props.class}>{this.props.value}</p>
+        )
+    }
+}
+
+
+
